@@ -18,8 +18,8 @@ addItem (newItem) {
   this.#items.push(newItem)
 }
 removeItem (itemToRemove) {
-  let removeIndex = this.#items.indexOf(itemToRemove);
-  return this.#items.splice(removeIndex,1)
+  const removeItemIndex = this.#items.indexOf(itemToRemove);
+  return this.#items.splice(removeItemIndex,1)
 }
 }
 

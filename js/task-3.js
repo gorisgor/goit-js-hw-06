@@ -15,15 +15,15 @@ class StringBuilder {
   getValue () {
     return this.#value
   }
-  padEnd (str) {
-    this.#value = this.#value.padEnd(2, str)
+    padEnd (str) {
+    this.#value = this.#value.padEnd(this.#value.length+1, str)
   }
   padStart (str) {
-    this.#value.padStart(3,str)
+    this.#value = this.#value.padStart(this.#value.length+1, str)
   }
   padBoth (str) {
-
-  }
+    this.#value = `${str}${this.#value}${str}`
+  }  
 }
 
 
